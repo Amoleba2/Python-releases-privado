@@ -1,0 +1,3 @@
+X = 10+5
+
+if X="15" print("acertou")

@@ -1,0 +1,30 @@
+print("calculador de numero par ou impar")
+print()
+print("Digite um número inteiro ou uma conta matemática.")
+print()
+print("Operadores aceitos:")
+print("+  -> soma")
+print("-  -> subtração")
+print("*  -> multiplicação")
+print("/ -> divisão")
+print("** -> potência")
+print()
+print("Observação: contas decimais serão arredondadas.")
+print("espaço e letras não são validos.")
+print()
+X = input("digite aqui:")
+allow = ("0123456789+-*/()")
+for c in X:
+    if c not in allow:
+        print("letras ou caracteres invalidos não são permitidos")
+        print("")
+        input("aperte enter para finalizar a tarefa.")
+        exit()
+if "/" in X and "//" not in X:
+    X = X.replace("/", "//")
+X = eval(X)
+if X % 2 == 0:
+    print(f"{X} e um numero par")
+elif X % 2 == 1:
+    print(f"{X} e um numero impar")
+input("aperte enter para finalizar a tarefa")
